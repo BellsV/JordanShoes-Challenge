@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 62.5%;
+
+    --ff-primary: 'Montserrat', sans-serif;
+
+    --c-primary: hsl(0, 0%, 98%);
+    --c-secondary: hsl(0, 0%, 9%);
+}
+
+
+.cabecalho, footer {
+    background: var(--c-secondary);
+    color: var(--c-primary);
+    font-family: var(--ff-primary);
+    font-size: 1.6rem;
+    width: 41.4rem;
+    height: 6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
+
+h1 {
+    font-family: var(--ff-primary);
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin: 0.6rem 0 0.7rem;
+    color: var(--c-secondary);
+
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
+
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),url("./images/Air-Jordan-1-Retro-High-OG-Wmns-TWIST-Feminino\ 1.svg");
+
+    max-width: 41.4rem;
+    height: 37.7rem;
+    margin: 0 auto; 
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.text-banner {
+    position: relative;
+    padding: 16.8rem 3.7rem 12.2rem 2.0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 1.2rem;
+}
+
+.text-banner h2 {
+    font-family: var(--ff-primary);
+    font-weight: 700;
+    font-size: 2.8rem;
+    line-height: 3.41rem;
+    
+    color: var(--c-primary);
+}
+
+.text-banner p {
+    font-family: var(--ff-primary);
+    font-weight: 600;
+    font-size: 1.6;
+    line-height: 2.9rem;
+    width: 357px;
+    height: 87px;
+
+    color: var(--c-primary);
+}
+
+#sub-title {
+    font-family: var(--ff-primary);
+    font-weight: 600;
+    font-size: 2.8rem;
+    margin-top: 5.0rem;
+
+    color: var(--c-secondary);
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+span {
+    font-family: var(--ff-primary);
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.9rem;
+    height: 5.8rem;
+
+    margin: 0 0 5.9rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product {
+    background-color: #EBE9EA;;
+    width: 37.4rem;
+    height: 30.2rem;
+    margin-bottom: 3rem;
+    display: grid;
+    place-content: center;
+}
+
+.product:hover {
+    transform: scale(1.1);
+    border: 1px solid rgb(214, 176, 4);
+    border-radius: 5px;
+}
+
+.text-banner h2, .text-banner p {
+    animation: topdown 950ms;
+}
+
+#sub-title, span, .container {
+    animation: downtop 950ms;
+}
+
+
+@media (min-width: 700px) {
+
+    .cabecalho, footer {
+        width: 144rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner {
+        background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),url("./images/Mask\ Group.svg");
+    
+        min-width: 140rem;
+        height: 37.7rem;
+        margin: 0 auto; 
+        object-fit: fill;
+        background-repeat: no-repeat;
+    }
+
+    .text-banner {
+        position: relative;
+        padding: 12.9rem 94rem 12.1rem 10rem;
+    }
+
+    .container {
+        margin: 0 9rem 3.9rem 10rem ;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .text-banner h2, .text-banner p {
+        animation: topdown 900ms;
+    }   
+    #sub-title, span, .container {
+        animation: downtop 950ms;
+    }
+}
+
+
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downtop {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(15px);
+    }
+}
